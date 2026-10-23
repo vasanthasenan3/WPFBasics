@@ -1,0 +1,190 @@
+﻿<Window x:Class="WpfDesigning.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDesigning"
+        mc:Ignorable="d"
+        Title="Registration" Height="700" Width="1000">
+    <Window.Background>
+        <ImageBrush ImageSource="/light-blue-background-gradient-illustration-eps10-vector.jpg"></ImageBrush>
+    </Window.Background>
+
+    <StackPanel VerticalAlignment="Center"
+            HorizontalAlignment="Center">
+
+        <Border Width="900"
+            Height="600"
+            Background="Azure" 
+            CornerRadius="20">
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25"
+                              ShadowDepth="5"
+                              Opacity="0.3"/>
+            </Border.Effect>
+
+            <StackPanel Orientation="Horizontal">
+
+
+
+                <Border Width="350"
+                    Height="520"
+                    Background="#36AFF4"
+                    CornerRadius="20,120,120,20">
+
+                    <StackPanel Margin="30">
+
+                        <Ellipse Width="100" Height="100"  Margin="0,0,180,0" Stroke="Black" StrokeThickness="2" >
+                            <Ellipse.Fill>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="/241-2415195_register-icon-register-icon.png"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <TextBlock Text="STUDENT"
+                               FontSize="40"
+                               FontWeight="Bold"
+                               Foreground="White"
+                               Margin="0,20,0,0"/>
+
+                        <TextBlock Text="REGISTRATION PORTAL"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="White"
+                               Margin="0,10,0,20"/>
+
+                        <TextBlock Text="Manage your profile, skills and preferences."
+                               Width="250"
+                               FontSize="15"
+                               Foreground="White"
+                               TextWrapping="Wrap"/>
+
+                        <TextBlock Text="Create your academic profile and showcase your skills with a modern registration system."
+                               Width="260"
+                               Margin="0,20,0,0"
+                               FontSize="13"
+                               Foreground="White"
+                               TextWrapping="Wrap"/>
+
+
+
+                    </StackPanel>
+
+                </Border>
+
+
+
+                <StackPanel Margin="25">
+
+                    <TextBlock Text="Student Details"
+                           FontSize="30"
+                           FontWeight="SemiBold"
+                           Foreground="#1F2937"
+                           Margin="0,0,0,20"/>
+
+                    <Border Background="Azure" BorderThickness="2" BorderBrush="DarkGoldenrod" Height="470" Width="500">
+                        <StackPanel Margin="15">
+
+                            <TextBlock   Text="Student Name"/>
+
+                            <TextBox Name="txtname" Height="40"
+          Margin="0,5,0,10"
+          Padding="10" BorderBrush="DarkGoldenrod" BorderThickness="1.5" />
+
+                            <TextBlock Text="Course"/>
+
+                            <ComboBox Name="cmbcourse" BorderBrush="DarkGoldenrod" BorderThickness="2"  Height="40"
+           Margin="0,5,0,10">
+
+                                <ComboBoxItem  Content="BCA"/>
+                                <ComboBoxItem Content="B.Sc Computer Science"/>
+                                <ComboBoxItem Content="B.Tech IT"/>
+                                <ComboBoxItem Content="MCA"/>
+
+                            </ComboBox>
+                            <TextBlock Text="Skills"/>
+                            <CheckBox Content="C++" x:Name="chkcpp"  Margin="0,3,0,0" BorderBrush="DarkGoldenrod" BorderThickness="1.5"></CheckBox>
+                            <CheckBox Content="HTML" x:Name="chkhtml"   Margin="0,0,0,0" BorderBrush="DarkGoldenrod" BorderThickness="1.5"></CheckBox>
+                            <CheckBox Content="Python" x:Name="chkpython"   Margin="0,0,3,0" BorderBrush="DarkGoldenrod" BorderThickness="1.5"></CheckBox>
+                            <CheckBox Content="Java" x:Name="chkjava"  Margin="0,0,3,0" BorderBrush="DarkGoldenrod" BorderThickness="1.5"></CheckBox>
+                            <TextBlock Text="Intrests"></TextBlock>
+                            <ListBox SelectionMode="Multiple" BorderBrush="DarkGoldenrod" Name="lstintrests" Margin="0,3,0,0" BorderThickness="1.5">
+                                <ListBoxItem Content="Web Development"></ListBoxItem>
+                                <ListBoxItem Content="UI/UX Design"></ListBoxItem>
+                                <ListBoxItem Content="Data Science"></ListBoxItem>
+                                <ListBoxItem Content="Artificial Inteligence"></ListBoxItem>
+                            </ListBox>
+                            <TextBlock Text="Gender"
+            Margin="0,5"/>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <RadioButton x:Name="rbmale" Content="Male" BorderThickness="1.5" BorderBrush="DarkGoldenrod"
+                  Margin="0,0,20,0"/>
+
+                                <RadioButton Name="rbfemale" BorderThickness="1.5" BorderBrush="DarkGoldenrod" Content="Female"
+                  Margin="0,0,20,0"/>
+
+                                <RadioButton BorderThickness="1.5" BorderBrush="DarkGoldenrod" Content="Other"/>
+
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Border CornerRadius="15" Margin="10,15,250,0" BorderThickness="2" BorderBrush="Black" Background="#0B5CAD" Width="150" Height="45">
+                                    <Button Click="Button_Click" Content="Submit"
+                                 Width="100"
+                                        Cursor="Hand"
+                                 Height="30"
+                                 FontSize="15"                                  
+                                 Margin="0,0,0,0"
+                                 Background="#0B5CAD"
+                                 Foreground="White"
+                                 FontWeight="SemiBold"
+                                 BorderThickness="0"/>
+
+
+                                </Border>
+                                <Border CornerRadius="15" Margin="-300,13,0,0" BorderThickness="2" BorderBrush="Black" Background="DarkRed" Width="150" Height="45">
+                                    <Button Content="Clear Form"
+ Width="100"
+ Height="30"
+ Cursor="Hand"                                       
+ FontSize="15"                                  
+ Margin="0,0,0,0"
+ Background="DarkRed"
+ Foreground="White"
+ FontWeight="SemiBold"
+ BorderThickness="0"/>
+
+
+                                </Border>
+                            </StackPanel>
+
+
+
+                        </StackPanel>
+
+
+
+                    </Border>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </StackPanel>
+
+            </StackPanel>
+
+        </Border>
+
+    </StackPanel>
+</Window>
